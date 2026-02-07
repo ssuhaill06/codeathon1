@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Interview - Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Field Selection Section -->
+        <div id="fieldSelectionSection" class="field-selection-section">
+            <div class="field-selection-card">
+                <h1>Choose Your Interview Field</h1>
+                <p>Select the technical domain you'd like to be interviewed on:</p>
+                
+                <div class="field-select-box">
+                    <label for="fieldSelect">Select Interview Field:</label>
+                    <select id="fieldSelect" class="field-dropdown">
+                        <option value="">-- Select a Field --</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Artificial Intelligence & Machine Learning">Artificial Intelligence & Machine Learning</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Business Systems">Business Systems</option>
+                        <option value="IT Department">IT Department</option>
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="DevOps">DevOps</option>
+                    </select>
+                </div>
+                
+                <div class="button-group">
+                    <button id="startInterviewBtn" class="btn btn-primary" disabled>Start Interview</button>
+                </div>
+                <span id="fieldNote" class="field-note"></span>
+            </div>
+        </div>
+
+        <!-- Interview Section -->
+        <div id="interviewSection" class="interview-section hidden">
+            <div class="interview-header">
+                <div class="interview-title">
+                    <h1>Mock Interview</h1>
+                    <p id="selectedField" class="selected-field">Field: <strong></strong></p>
+                </div>
+                <span id="questionCounter" class="question-counter">Question 1/10</span>
+            </div>
+
+            <div class="question-box">
+                <h2 id="questionText">Loading question...</h2>
+            </div>
+
+            <div class="answer-box">
+                <label for="answerInput">Your Answer:</label>
+                <textarea id="answerInput" class="textarea" placeholder="Type your answer here..."></textarea>
+                <div class="char-count">
+                    <span id="charCount">0</span> characters
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="submitBtn" class="btn btn-primary">Submit Answer</button>
+                <button id="clearBtn" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <div class="results-header">
+                <h1>Your Scores</h1>
+                <p id="resultQuestion">Question:</p>
+            </div>
+
+            <div class="results-table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Score</th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accuracy</td>
+                            <td><span id="resultAccuracy">--</span>%</td>
+                            <td><div class="progress-bar"><div class="progress-fill" id="accuracyBar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>Clarity</td>
+                            <td><span id="resultClarity">--</span>%</td>
+                            <td><div class="progress-bar"><div class="progress-fill" id="clarityBar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>Completeness</td>
+                            <td><span id="resultCompleteness">--</span>%</td>
+                            <td><div class="progress-bar"><div class="progress-fill" id="completenessBar"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td>Confidence</td>
+                            <td><span id="resultConfidence">--</span>%</td>
+                            <td><div class="progress-bar"><div class="progress-fill" id="confidenceBar"></div></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="answer-review">
+                <h3>Your Answer:</h3>
+                <p id="reviewAnswer"></p>
+            </div>
+
+            <div class="button-group">
+                <button id="nextBtn" class="btn btn-primary">Next Question</button>
+            </div>
+        </div>
+
+        <!-- End Section -->
+        <div id="endSection" class="end-section hidden">
+            <div class="end-header">
+                <h1>Interview Complete! 🎉</h1>
+                <p id="endFieldDisplay">Field: <strong></strong></p>
+                <p>Here is your final performance summary:</p>
+            </div>
+
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-label">Average Accuracy</div>
+                    <div class="stat-value" id="summaryAccuracy">--</div>%
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Average Clarity</div>
+                    <div class="stat-value" id="summaryClarity">--</div>%
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Average Completeness</div>
+                    <div class="stat-value" id="summaryCompleteness">--</div>%
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Average Confidence</div>
+                    <div class="stat-value" id="summaryConfidence">--</div>%
+                </div>
+            </div>
+
+            <div class="all-results">
+                <h3>All Answers and Scores:</h3>
+                <div id="allResultsContainer"></div>
+            </div>
+
+            <div class="button-group">
+                <button id="restartBtn" class="btn btn-primary btn-lg">Start New Interview</button>
+                <button id="homeBtn" class="btn btn-secondary btn-lg">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

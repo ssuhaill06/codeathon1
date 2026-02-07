@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mock Interview System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="landing-page" id="landingPage">
+            <div class="landing-content">
+                <h1>📝 Mock Interview System</h1>
+                <p class="intro-text">
+                    Practice your interview skills with our text-based mock interview system. 
+                    Answer 5 common interview questions and get instant feedback on your responses.
+                </p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <span class="feature-icon">✍️</span>
+                        <h3>Text-Based</h3>
+                        <p>Type your answers at your own pace.</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">📊</span>
+                        <h3>Instant Feedback</h3>
+                        <p>Get immediate scores on accuracy, clarity, completeness, and confidence.</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Fast & Simple</h3>
+                        <p>No install needed. Works entirely in your browser.</p>
+                    </div>
+                </div>
+
+                <button id="startBtn" class="btn btn-primary btn-lg">Start Interview</button>
+                
+                <div class="info-box">
+                    <strong>How it works:</strong>
+                    <ul>
+                        <li>Answer 5 interview questions</li>
+                        <li>Each answer is evaluated instantly</li>
+                        <li>View your performance scores</li>
+                        <li>All data stored locally - no account needed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle Start button click
+        document.getElementById('startBtn').addEventListener('click', function() {
+            // Redirect to interview page
+            window.location.href = 'interview.html';
+        });
+    </script>
+</body>
+</html>
